@@ -4,9 +4,9 @@ document.getElementById('downloadButton').addEventListener('click', async functi
 
   try {
     // Ensure all images are loaded before converting to PDF
-    await ensureImageLoaded('exampleImage');
+    await ensureImageLoaded('signImg');
 
-    const element = document.getElementById('content');
+    const element = document.getElementById('registrationForm-outer');
 
     // Directly convert the HTML content to PDF using html2pdf
     html2pdf()
