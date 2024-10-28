@@ -3,7 +3,7 @@ document.getElementById('download').addEventListener('click', async function () 
   loader.style.display = 'block';
 
   try {
-    // Ensure the image is fully loaded before converting
+    // Ensure all images are loaded before converting to PDF
     await ensureImageLoaded('exampleImage');
 
     const element = document.getElementById('content');
@@ -11,14 +11,15 @@ document.getElementById('download').addEventListener('click', async function () 
     // Directly convert the HTML content to PDF using html2pdf
     html2pdf()
       .set({
-        margin: 1,
+        margin: [0.5, 0.5, 0.5, 0.5], // Top, left, bottom, right margins
         filename: 'converted-page.pdf',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: {
-          scale: 2, // High scale for better quality
-          useCORS: true, // Enable CORS to load cross-origin images
+          scale: 1.5, // Adjust scale for better performance
+          useCORS: true, // Enable CORS for cross-origin images
         },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }, // Ensure proper page breaks
       })
       .from(element)
       .save();

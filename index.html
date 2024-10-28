@@ -24,14 +24,60 @@
         text-align: center;
         margin-top: 20px;
       }
+      @media print {
+        .page-break {
+          page-break-before: always;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container" id="content">
-      <h1>Hello from Node.js Server!</h1>
+      <h1>Hello</h1>
       <p>This is a simple HTML page served by Node.js, with an image and PDF export functionality.</p>
       <!-- Image hosted locally, update src to your local image -->
       <img id="exampleImage" src="/image.png" alt="Example Image" />
+
+      <section>
+        <h2>About Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet turpis vel sem commodo gravida.
+          Nullam in semper mauris. Nulla interdum suscipit velit a tincidunt. Sed vitae metus ipsum. Vivamus vitae orci
+          nec augue ultricies hendrerit. Pellentesque at cursus felis.
+        </p>
+      </section>
+
+      <section>
+        <h2>Our Services</h2>
+        <ul>
+          <li>Service 1: Lorem ipsum dolor sit amet</li>
+          <li>Service 2: Vivamus suscipit orci nec ultricies malesuada</li>
+          <li>Service 3: Donec eget nulla ut sapien sollicitudin malesuada</li>
+          <li>Service 4: Curabitur accumsan dui et ex iaculis luctus</li>
+          <li>Service 5: Cras vel ligula et odio dapibus consequat</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Gallery</h2>
+        <img src="/image.png" alt="Example Image" />
+        <img src="/image.png" alt="Example Image" />
+        <img src="/image.png" alt="Example Image" />
+      </section>
+
+      <section>
+        <h2>Contact Us</h2>
+        <p>
+          You can reach us at:
+          <strong>Email:</strong> example@example.com<br />
+          <strong>Phone:</strong> +123-456-7890
+        </p>
+        <p>Address: 123 Example Street, Example City, EX 45678</p>
+      </section>
+
+      <footer>
+        <p>&copy; 2024 Simple Node.js Server. All rights reserved.</p>
+      </footer>
     </div>
 
     <button id="download">Download PDF</button>

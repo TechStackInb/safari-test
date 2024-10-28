@@ -1,0 +1,85 @@
+<!-- If you want to add a Click to PDF link to your pages, then just add the following link -->
+
+<a href="javascript:location.href='https://api.html2pdf.co.uk/?url='+escape(location.href)">Click to PDF</a>
+
+<!-- We also have a custom function that uses JavaScript or jQuery to send the contents of a webpage to us for conversion -->
+
+<a href="#;" onclick="HTML2PDF()">Click to PDF</a>
+
+<script>
+  function HTML2PDF() {
+    // Replace this with your HTML2PDF license
+    var license = 'yourlicensekey';
+
+    // First we take the HTML of the page
+    var html = '',
+      node = document.firstChild;
+    while (node) {
+      switch (node.nodeType) {
+        case Node.ELEMENT_NODE:
+          html += node.outerHTML;
+          break;
+        case Node.TEXT_NODE:
+          html += node.nodeValue;
+          break;
+        case Node.CDATA_SECTION_NODE:
+          html += '<![CDATA[' + node.nodeValue + ']]>';
+          break;
+        case Node.COMMENT_NODE:
+          html += '<!--' + node.nodeValue + '-->';
+          break;
+        case Node.DOCUMENT_TYPE_NODE:
+          // (X)HTML documents are identified by public identifiers
+          html +=
+            '<!DOCTYPE ' +
+            node.name +
+            (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') +
+            (!node.publicId && node.systemId ? ' SYSTEM' : '') +
+            (node.systemId ? ' "' + node.systemId + '"' : '') +
+            '>\n';
+          break;
+      }
+      node = node.nextSibling;
+    }
+
+    // We pass the html and our license
+    // You don't need to pass any other parameters if your defaults in our members area are already good
+    var data = { html: html, license: license };
+    var serialized = Object.keys(data)
+      .map(function (k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]);
+      })
+      .join('&');
+
+    // You can insert an "in progress" message here
+
+    // We now prepare the API call
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      var a;
+      if (xhttp.readyState === 4 && xhttp.status === 200) {
+        // The PDF is now generated
+        // You can remove the "in progress" message here
+
+        // Now we show the PDF to the user
+        var filename = 'example.pdf';
+        if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+          window.navigator.msSaveOrOpenBlob(xhttp.response, filename);
+        } else {
+          a = document.createElement('a');
+          a.href = window.URL.createObjectURL(xhttp.response);
+          a.download = filename;
+          a.style.display = 'none';
+          document.body.appendChild(a);
+          a.click();
+        }
+      }
+    };
+
+    // This is the actual call to our API
+    xhttp.open('POST', 'https://api.html2pdf.co.uk/', true);
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhttp.responseType = 'blob';
+    xhttp.send(serialized);
+  }
+</script>
