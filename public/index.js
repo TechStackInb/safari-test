@@ -1,4 +1,4 @@
-document.getElementById('download').addEventListener('click', async function () {
+document.getElementById('downloadButton').addEventListener('click', async function () {
   const loader = document.getElementById('loader');
   loader.style.display = 'block';
 
