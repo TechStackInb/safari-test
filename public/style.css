@@ -1,0 +1,1145 @@
+.form-dt {
+  /* display: none; */
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid #018534;
+}
+
+.registrationForm-left {
+  width: 320px;
+  background-color: #f6f8f6;
+  box-shadow: -2px -2px 25px #00000014;
+}
+
+.page-center2 {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.page-center3 {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.registrationForm-right .accordion-content {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.registrationForm-right .error {
+  color: red;
+  margin-top: 5px;
+}
+
+.formTitleListWrapper p.titleWrp {
+  margin: 0px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.registrationForm-left .backButton span {
+  text-align: left;
+  letter-spacing: 0px;
+  color: #008533;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-decoration: none;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.registrationForm-left .backButton span:hover {
+  text-decoration: underline;
+}
+
+.registrationForm-left .backButton img {
+  margin-right: 12px;
+}
+
+.registrationForm-left span.tickcrossImage {
+  width: 20px;
+}
+
+.registrationForm-left span.title {
+  width: calc(100% - 25px);
+  text-align: left;
+  letter-spacing: 0px;
+  color: #000000;
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+}
+
+.registrationForm-left span.tickcrossImage img.tick {
+  display: none;
+}
+
+.registrationForm-left span.tickcrossImage img.cross {
+  display: none;
+}
+
+.registrationForm-left span.tickcrossImage img {
+  width: 16px;
+}
+
+.registrationForm-left .backButton {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.accordion-item {
+  padding: 14px 0px;
+  margin-bottom: 14px;
+}
+
+.accordion-header {
+  letter-spacing: 0px;
+  color: #000000;
+  /* //text-transform: uppercase; */
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.accordion-content form {
+  font-family: Open Sans, sans-serif;
+}
+
+.accordion-header span {
+  cursor: pointer;
+}
+
+.accordion-header img.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
+}
+
+.accordion-header img {
+  width: 16px;
+  transition: transform 0.5s ease;
+}
+
+.accordion-content label {
+  letter-spacing: 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #008533;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.accordion-content label strong {
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.accordion-content input,
+.accordion-content select,
+.accordion-content textarea {
+  border: 0px;
+  border-bottom: 1px solid rgb(112, 112, 112, 0.5);
+  color: #000000;
+  width: 100%;
+  height: 30px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  font-family: Open Sans, sans-serif;
+}
+
+.accordion-content input::placeholder,
+.accordion-content select::placeholder {
+  color: gray;
+}
+
+.accordion-content button.button-save-wrap {
+  border: 2px solid #018534;
+  border-radius: 46px;
+  letter-spacing: 0px;
+  color: #018534;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  padding: 8px 35px;
+  background-color: #ffffff;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.accordion-content button.button-save-wrap:hover {
+  opacity: 72%;
+}
+
+.accordion-content .err_msg_hide.err_msg {
+  margin: 0px;
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.accordion-content button.button-save-wrap img {
+  width: 28px;
+}
+
+.accordion-content .accFormFlex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 50px;
+}
+
+.accordion-content .accFormField {
+  flex: 0 47%;
+}
+
+:focus-visible {
+  outline: -webkit-focus-ring-color auto 0px !important;
+}
+
+.accordion-content .accordion-header span.accTitle {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-header span.accTitle img {
+  width: 10px;
+  margin-right: 10px;
+}
+
+/* Base style for the custom radio button */
+input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #008533;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Outer circle (default state) */
+input[type='radio']::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+/* Inner circle (checked state) */
+input[type='radio']:checked::after {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 15px;
+  background-color: #008533;
+  /* Change this color to your desired color */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+/* input[type="radio"]:hover::before {
+//background-color: #008533; Lighten the outer circle on hover */
+/* } */
+
+/* Focus outline for accessibility */
+input[type='radio']:focus-visible {
+  outline: 2px solid #008533;
+  /* Custom focus color */
+  outline-offset: 4px;
+}
+
+.accordion-content .genderFlex {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.accordion-content .genderFlex label {
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.accordion-content .genderFlexOuter {
+  display: flex;
+  margin-top: 10px;
+}
+
+.accordion-content .gender_symbol {
+  display: none;
+}
+
+.accordion-content p.gender_opt {
+  margin: 0px;
+  color: #008533;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.accordion-content span.required-star {
+  color: #ff0c0c;
+}
+
+.accordion-content label.sipLabel {
+  display: inline;
+}
+
+.accordion-content .accFormField.fullFexwidth {
+  flex: 0 100%;
+}
+
+.accordion-content .accFormField.seperateAddress {
+  gap: 30px 50px;
+  width: 100%;
+  display: flex;
+}
+
+.accordion-content .accFormField.seperateAddress .for_flex_one {
+  flex: 0 47%;
+}
+
+.accordion-content label.divorced_or_separated {
+  display: inherit;
+}
+
+.accordion-content .siblings_sts_outer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.accordion-content .siblings_sts_outer .siblingsFlex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accordion-content .siblings_sts_outer .siblingsFlex label {
+  margin-bottom: 0px;
+}
+
+.accordion-content .accFormField.add_siblings_flex {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.accordion-content .accFormField.add_siblings_flex .for_flex_two {
+  flex: 0 47%;
+}
+
+.accordion-content .accFormField p {
+  margin: 0px;
+  color: #008533;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: flex-start;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.parentsMaritalRadio .for_radio_content_padding {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.for_radio_content_padding .statusCol {
+  flex: 0 32%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.for_radio_content_padding .statusCol label {
+  margin-bottom: 0;
+  width: calc(100% - 30px);
+}
+
+.for_radio_content_padding .statusCol label.single_parent_family {
+  display: inline;
+}
+
+.accordion-header span span.font_size_reduce {
+  text-align: left;
+  letter-spacing: 0px;
+  color: #000000;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  text-transform: initial;
+  display: flex;
+}
+
+span.accTitle.mergedFormTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 20px;
+  padding: 0px 0px 30px;
+  display: inline-block;
+}
+
+span.accTitle.mergedFormTitle span.font_size_reduce {
+  font-size: 12px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #000000;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.accordion-content .accFormField p strong {
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.phoneInvalid {
+  color: #ff0000;
+  font-size: 12px;
+}
+
+.phoneValid {
+  color: #008533;
+  font-size: 12px;
+}
+
+/* .accordion-content label.aln-label {
+//display: inline;
+} */
+.accFormField .lunchWrap {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.accFormField .lunchFlex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accFormField .lunchFlex label {
+  margin: 0px;
+}
+
+.lunchRadioWrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.accFormField.fullFexwidth.rqstDiet p.for_padding.for_top_padding {
+  padding-top: 20px;
+}
+
+.accFormField .lunchFlex label strong {
+  margin-right: 3px;
+}
+
+.new_for_flex.busRadioWrap.accFormFlex {
+  display: block;
+}
+
+.new_for_flex.busRadioWrap.accFormFlex .for_padding.accFormField {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.new_for_flex.busRadioWrap.accFormFlex .busFlex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.new_for_flex.busRadioWrap.accFormFlex .busFlex label {
+  margin: 0px;
+}
+
+.busHideShow.accFormFlex {
+  padding-top: 30px;
+}
+
+label.one_way_to_school {
+  display: inline-block;
+}
+
+.new_for_flex.busRadioWrap.accFormFlex .busFlex label strong {
+  margin-right: 3px;
+}
+
+p.accFormField.fullFexwidth.afterSchool {
+  margin: 0px;
+  color: #008533;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: flex-start;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.inCaseofEmergency label {
+  display: inline-block;
+}
+
+.medicalAuthorisation .accFormField.fullFexwidth.for_radio p.labelText {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.medicalAuthorisation div#medical_opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 50px;
+}
+
+.medicalAuthorisation div#medical_opts .medOpt {
+  flex: 0 47%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.medicalAuthorisation div#medical_opts .medOpt label {
+  margin: 0px;
+}
+
+.authoriseWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.authoriseWrapper .authoriseFlex {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.authoriseWrapper .authoriseFlex label {
+  margin: 0px;
+}
+
+.authoriseWrapper .authoriseFlex label strong {
+  margin-right: 3px;
+}
+
+.medicalAuthorisation div#medical_opts .medOpt label strong {
+  margin-right: 3px;
+}
+
+.medicalDetails label {
+  display: inline;
+}
+
+.confirmationDisclosedInner {
+  display: flex;
+  gap: 10px;
+}
+
+.confirmationDisclosedInner input#confirmationDisclosed {
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+}
+
+.confirmationDisclosedInner label.confirmationDisclosed {
+  width: calc(100% - 30px);
+  margin: 0px;
+  display: inline;
+}
+
+.confirmationDisclosed {
+  margin-top: 35px;
+}
+
+.upload-container input {
+  border: 0px;
+  width: 200px;
+  background-color: transparent !important;
+}
+
+.uploadProgBarandText {
+  display: flex;
+  gap: 30px;
+}
+
+label.fileUploadLabel {
+  width: 440px;
+  display: inline;
+  margin: 0px;
+}
+
+.fileUploadInput {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(100% - 440px);
+}
+
+.upload-container {
+  margin-bottom: 50px;
+}
+
+.accordion-header span.accTitleDot {
+  width: 10px;
+}
+
+.accordion-header span.accTitle {
+  width: calc(100% - 20px);
+}
+
+.accordion-header span.arrow {
+  width: 25px;
+}
+
+.accordion-header span.accTitleDot img {
+  width: 10px;
+}
+
+.confirmationImgInner span.flexColumn.accFormField {
+  flex: 0 47%;
+  letter-spacing: 0px;
+  color: #000000;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: normal;
+  gap: 0 50px;
+}
+
+.confirmationImgInner span.flexColumn.accFormField p {
+  color: #000000;
+  display: block;
+}
+
+.confirmationImgOuter {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.confirmationImgFlex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.confirmationImgFlex label {
+  margin: 0px;
+}
+
+.confirmationImgInner span.flexColumn.accFormField a {
+  color: #008533;
+  text-decoration: none;
+}
+
+span.guardian_signature_note {
+  letter-spacing: 0px;
+  font-size: 11px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #008533;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  gap: 10px;
+}
+
+span.clearSign {
+  letter-spacing: 0px;
+  font-size: 11px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #008533;
+  display: flex;
+  text-decoration: none;
+  margin: 0px;
+  padding: 10px;
+  border: 2px solid #018534;
+  border-radius: 46px;
+  cursor: pointer;
+  text-align: center;
+}
+
+canvas#sig-canvas {
+  max-width: 439px;
+  width: 100%;
+  height: 200px;
+  border-bottom: 1px solid #70707080;
+}
+
+.authorisation-sec2 {
+  padding-top: 50px;
+}
+
+.finalButtonsOuter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.finalButtonsOuter button {
+  border: 2px solid #018534;
+  border-radius: 46px;
+  letter-spacing: 0px;
+  color: #018534;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  padding: 8px 35px;
+  background-color: #ffffff;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.finalButtonsOuter button img {
+  width: 30px;
+}
+
+.finalButtonsOuter button:hover {
+  opacity: 72%;
+}
+
+button#SaveandResumelater {
+  padding: 8px 50px;
+}
+
+.confirmationImgInner span.flexColumn.accFormField li {
+  position: relative;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2215%22 viewBox=%220 0 24 24%22%3E%3Cpath fill=%22green%22 d=%22M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z%22/%3E%3C/svg%3E');
+}
+
+.confirmationImgInner span.flexColumn.accFormField li:before {
+  top: 5px;
+  background-image: url(https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Dot.svg);
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: -20px;
+  background-size: 10px;
+}
+
+.popup-inner {
+  background: #eefff3 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 25px #00000029;
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px;
+}
+
+.popup-max-width {
+  max-width: 550px;
+  margin: 20px auto;
+}
+
+.popup-inner p {
+  letter-spacing: 0px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  margin: 10px 0px;
+}
+
+.popup-inner p.green-text {
+  letter-spacing: 0px;
+  color: #008533;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.popup-inner button.button-popup {
+  border: 2px solid #018534;
+  border-radius: 46px;
+  letter-spacing: 0px;
+  color: #018534;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+.popup-inner button.button-popup:hover {
+  opacity: 72%;
+}
+
+.err_msg_hide {
+  display: none;
+}
+
+.accordion-content .accFormField.add_siblings_flex .for_flex_twoFlex {
+  margin-top: 20px;
+}
+
+.accordion-content .accFormField.add_siblings_flex .for_flex_one.removeBorder {
+  margin-top: 20px;
+}
+
+.confirmationDisclosedInner input[type='checkbox'] {
+  accent-color: #008533;
+}
+
+/* Hide the default checkbox */
+.confirmationDisclosedInner input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+/* Custom checkbox style */
+.confirmationDisclosedInner label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 30px;
+  user-select: none;
+}
+
+/* Create the custom checkbox */
+.confirmationDisclosedInner label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #008533;
+  /* Border color */
+  background-color: white;
+  /* Background color */
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+  margin-top: 4px;
+}
+
+/* Custom checkmark */
+.confirmationDisclosedInner input[type='checkbox']:checked+label::before {
+  background-color: #008533;
+  /* Checked background color */
+  border-color: #008533;
+  /* Checked border color */
+}
+
+/* Checkmark style */
+.confirmationDisclosedInner input[type='checkbox']:checked+label::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Hover effect */
+.confirmationDisclosedInner label:hover::before {
+  border-color: #008533;
+  /* Darker border color on hover */
+  background-color: transparent;
+  /* Background color on hover */
+}
+
+.fileUploadInput {
+  position: relative;
+}
+
+.remove-file-btn {
+  border: none;
+  background: none;
+  font-size: 10px;
+  color: #000000;
+  cursor: pointer;
+  width: 18px;
+  margin-left: 10px;
+  height: 18px;
+  background-color: #cbcbca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.remove-file-btn:hover {
+  color: darkred;
+}
+
+label.progress-label span {
+  display: none;
+}
+
+/* Default progress bar styles */
+progress {
+  height: 8px;
+  -webkit-appearance: none;
+  /* Remove default styling in WebKit browsers */
+  appearance: none;
+  border-radius: 5px;
+}
+
+/* WebKit browsers */
+progress::-webkit-progress-bar {
+  background-color: #e3e6e4;
+  /* Light grey background */
+  border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #018534;
+  /* Green color for the progress */
+  border-radius: 5px;
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+  background-color: green;
+  /* Green color for the progress */
+  border-radius: 5px;
+}
+
+.greenButtonIcon {
+  position: absolute;
+  right: 15px;
+  /* Adjust the position as needed */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.secPointofCon {
+  margin-top: 50px;
+}
+
+.schoolBusTiltle,
+.afterSchoolTitle {
+  margin-top: 30px;
+}
+
+.medicalDetailsTitle {
+  margin-top: 20px;
+}
+
+.registrationForm-outer {
+  border-top: 1px solid #018534;
+  padding: 0 20px;
+}
+
+.finalDowloadPrintOuter {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0 20px 0;
+  justify-content: space-between;
+}
+
+.finalDowloadPrintOuter .left {
+  width: 130px;
+}
+
+.finalDowloadPrintOuter .center {
+  text-align: center;
+  width: calc(100% - 460px);
+}
+
+.finalDowloadPrintOuter .right {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  text-align: center;
+  width: 310px;
+}
+
+.downloadHeading .center h1 {
+  margin: 0px;
+  color: #008533;
+  font-size: 31px;
+}
+
+.downloadHeading {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.backToHome {
+  align-items: center;
+  color: #008533;
+  display: flex;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.backToHome img {
+  margin-right: 10px;
+}
+
+.finalDowloadPrintOuter button {
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #018534;
+  border-radius: 46px;
+  color: #018534;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 600;
+  gap: 10px;
+  letter-spacing: 0;
+  line-height: 15px;
+  padding: 8px 35px;
+}
+
+.finalDowloadPrintOuter button img {
+  width: 28px;
+}
+
+.finalDowloadPrintOuter button:hover {
+  opacity: 72%;
+}
+
+.finalDowloadPrintOuter button:hover {
+  opacity: 72%;
+}
+
+.backToHome:hover {
+  text-decoration: underline;
+}
+
+span.spanTextNormal {
+  margin-left: 0 !important;
+  width: auto !important;
+  font-weight: 400 !important;
+}
+
+.labelWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div#loader {
+  text-align: center;
+}
+
+.previewLink {
+  align-items: center;
+  border-radius: 46px;
+  color: #018534;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 15px;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.previewLink:hover {
+  opacity: 72%;
+}
+
+img#signImg {
+  width: 100%;
+}
+
+.labelWrapper strong {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.medicalAuthorisation div#medical_opts .medOpt label.radioLabel {
+  width: calc(100% - 25px);
+}
+
+/* ------------css from copy--------- */
+.accordion-content p.err_msg_hide {
+  display: none;
+}
+
+.tabsave {
+  font-size: 14px;
+  color: green;
+}
+
+.previewLink {
+  display: none;
+}
+
+.sessionExpiredPopupOuter.popupOuter {
+  padding-top: 50px;
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(255 255 255 / 75%);
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 9;
+}
+
+#loader {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
