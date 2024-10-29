@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="downloadButton">DOWNLOAD PDF</button>
+    <div class="registrationForm-inner form-dt" id="formONE">
+      <div class="registrationForm-right">
+        <div class="accordion">
+          <div class="accordion-item accordion1 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle accTitle1">
+                Applicant Year/Joining Date / Solicitante Año/Fecha de Incorporación</span
+              >
+            </div>
+            <div class="accordion-content">
+              <form id="form1" data-hs-cf-bound="true">
+                <div class="initial_details accFormFlex accForm1">
+                  <div class="initial_details_tab accFormField">
+                    <label for="schl_year"><strong>School Year</strong> / Curso Date / Fecha</label>
+                    <select name="schl_year" id="schl_year" class="schl_year field_required" disabled="" readonly="">
+                      <option value="" disabled="" selected="">Please Select</option>
+                      <option value="2024-2025">2024-2025</option>
+                      <option value="2025-2026">2025-2026</option>
+                      <option value="2026-2027">2026-2027</option>
+                      <option value="2027-2028">2027-2028</option>
+                    </select>
+                    <p id="schl_year_error" class="schl_year_empty err_msg_hide err_msg">*Please enter the value</p>
+                  </div>
+                  <div class="initial_details_tab accFormField">
+                    <label for="join_date"><strong>Joining Date</strong> / Fecha Incorporación</label>
+                    <input
+                      type="date"
+                      id="join_date"
+                      name="join_date"
+                      class="join_date field_required"
+                      min="2023-01-01"
+                      readonly=""
+                    />
+                    <p id="join_date_error" class="join_date_empty err_msg_hide err_msg">*Please enter the value</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion-item accordion2 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> Student Details / Datos Personales del Estudiante</span>
+            </div>
+            <div class="accordion-content">
+              <form id="form2" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="for_flex accFormFlex accForm2">
+                    <div class="for_flex_one accFormField">
+                      <label for="fname">
+                        <div class="labelWrapper">
+                          <strong
+                            >First Name(s) <span class="spanTextNormal"> : Nombre (s) </span>
+                            <span class="required-star">*</span></strong
+                          >
+                        </div>
+                      </label>
+                      <input type="text" id="fname" name="fname" class="fname field_required" readonly="" />
+                      <p id="fname_error" class="fname_empty err_msg_hide err_msg">*Please enter the First Name</p>
+                    </div>
+                    <div class="for_flex_one accFormField">
+                      <label for="lname">
+                        <div class="labelWrapper">
+                          <strong
+                            >Last Name(s) <span class="spanTextNormal"> : Apellido(s) </span>
+                            <span class="required-star">*</span></strong
+                          >
+                        </div>
+                      </label>
+                      <input type="text" id="lname" name="lname" class="lname field_required" readonly="" />
+                      <p id="lname_error" class="lname_empty err_msg_hide err_msg">*Please enter the Last Name</p>
+                    </div>
+
+                    <div class="for_flex_one accFormField">
+                      <label for="hm_adrs"><strong>Home Address</strong>: Domicilio</label>
+                      <input type="text" id="hm_adrs" name="hm_adrs" class="hm_adrs" readonly="" />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion-item accordion3 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> Family Details / Datos Familiares</span>
+            </div>
+            <div class="accordion-content">
+              <form id="form3" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="for_flex accFormFlex accForm3">
+                    <div class="accFormField for_flex_one for_flex_one_fl_wt">
+                      <label for="hm_lng">
+                        <div class="labelWrapper">
+                          <strong
+                            >Home Language(s)<span class="spanTextNormal">: Idioma(s) familiar(es)</span>
+                            <span class="required-star">*</span></strong
+                          >
+                        </div>
+                      </label>
+                      <input type="text" name="hm_lng" id="hm_lng" class="hm_lng field_required" readonly="" />
+                      <p id="home_lang_error" class="hm_lng_empty err_msg_hide err_msg">*Please enter the language</p>
+                    </div>
+                    <div class="accFormField for_radio for_flex_one">
+                      <label for="sbl__in_schl">
+                        <div class="labelWrapper">
+                          <strong
+                            >Siblings in School <span class="spanTextNormal">: Hermanos en el colegio </span>
+                            <span class="required-star">*</span></strong
+                          >
+                        </div>
+                      </label>
+                      <div class="siblings_sts_outer">
+                        <div class="siblingsFlex">
+                          <input
+                            type="radio"
+                            name="sbl__in_schl"
+                            id="siblings_yes"
+                            class="siblings_yes"
+                            value="true"
+                            readonly=""
+                            disabled=""
+                          />
+                          <label for="siblings_yes" class="radioLabel">Yes (Si) </label>
+                        </div>
+                        <div class="siblingsFlex">
+                          <input
+                            type="radio"
+                            name="sbl__in_schl"
+                            id="siblings_no"
+                            class="siblings_no"
+                            value="false"
+                            readonly=""
+                            disabled=""
+                          />
+                          <label for="siblings_no" class="radioLabel">No (No)</label>
+                        </div>
+                      </div>
+                      <p id="siblings_error" class="siblings_status_empty err_msg_hide err_msg">
+                        *Please check the required field
+                      </p>
+                    </div>
+                    <div id="siblings_details" class="accFormField add_siblings_flex fullFexwidth">
+                      <div class="for_flex_two">
+                        <p class="for_padding_one">
+                          <span class="labelWrapper">
+                            <strong>Sibling one <span class="spanTextNormal">: Primer Hermano(a) </span></strong>
+                          </span>
+                        </p>
+                        <div class="for_flex_twoFlex">
+                          <label for="child_one_name">
+                            <div class="labelWrapper">
+                              <strong
+                                >Name <span class="spanTextNormal">:Nombre</span
+                                ><span class="required-star">*</span></strong
+                              >
+                            </div>
+                          </label>
+                          <input
+                            type="text"
+                            name="child_one_name"
+                            id="child_one_name"
+                            class="child_one_name field_required"
+                            readonly=""
+                          />
+                          <p id="child_name_error" class="child_one_name_empty err_msg_hide err_msg">
+                            *Please enter the Name
+                          </p>
+                        </div>
+                        <div class="for_flex_twoFlex">
+                          <label for="child_one_class">
+                            <div class="labelWrapper">
+                              <strong
+                                >Class <span class="spanTextNormal">:Clase</span
+                                ><span class="required-star">*</span></strong
+                              >
+                            </div>
+                          </label>
+                          <input
+                            type="text"
+                            name="child_one_class"
+                            id="child_one_class"
+                            class="child_one_class field_required"
+                            readonly=""
+                          />
+                          <p id="child_class_error" class="child_one_class_empty err_msg_hide err_msg">
+                            *Please enter the Class Name
+                          </p>
+                        </div>
+                        <div class="for_flex_one removeBorder">
+                          <label for="sbl_dob">
+                            <div class="labelWrapper">
+                              <strong
+                                >Date of Birth <span class="spanTextNormal"> : Fecha nacimiento hermano(a)</span>
+                              </strong>
+                            </div>
+                          </label>
+                          <input type="date" name="sbl_dob" id="sbl_dob" class="sbl_dob" readonly="" />
+                        </div>
+                      </div>
+                      <div class="for_flex_two">
+                        <p class="for_padding_one">
+                          <span class="labelWrapper">
+                            <strong>Sibling two <span class="spanTextNormal">: Segundo Hermano(a) </span></strong>
+                          </span>
+                        </p>
+                        <div class="for_flex_twoFlex">
+                          <label for="child_two_name">
+                            <div class="labelWrapper">
+                              <strong>Name <span class="spanTextNormal">:Nombre</span></strong>
+                            </div>
+                          </label>
+                          <input
+                            type="text"
+                            name="child_two_name"
+                            id="child_two_name"
+                            class="child_two_name"
+                            readonly=""
+                          />
+                          <p class="child_two_name_empty err_msg_hide err_msg">*Please enter the Name</p>
+                        </div>
+                        <div class="for_flex_twoFlex">
+                          <label for="child_two_class">
+                            <div class="labelWrapper">
+                              <strong>Class <span class="spanTextNormal">:Clase</span></strong>
+                            </div>
+                          </label>
+                          <input
+                            type="text"
+                            name="child_two_class"
+                            id="child_two_class"
+                            class="child_two_class"
+                            readonly=""
+                          />
+                          <p class="child_two_class_empty err_msg_hide err_msg">*Please enter the Class Name</p>
+                        </div>
+                        <div class="for_flex_one removeBorder">
+                          <label for="sbl2_dob">
+                            <div class="labelWrapper">
+                              <strong
+                                >Date of Birth
+                                <span class="spanTextNormal"> : Fecha nacimiento hermano(a) </span>
+                              </strong>
+                            </div>
+                          </label>
+                          <input type="date" name="sbl2_dob" id="sbl2_dob" class="sbl2_dob" readonly="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accFormField for_radio parentsMaritalRadio fullFexwidth">
+                      <p class="parents_marital_sts">
+                        <span class="labelWrapper">
+                          <strong
+                            >Parents Marital Status
+                            <span class="spanTextNormal"> : Estado civil de los padres </span>
+                            <span class="required-star">*</span>
+                          </strong>
+                        </span>
+                      </p>
+                      <div class="for_radio_content_padding">
+                        <div class="statusCol">
+                          <input
+                            type="radio"
+                            name="parents_marital_status"
+                            id="separated"
+                            class="separated"
+                            value="Separated"
+                            readonly=""
+                            disabled=""
+                          />
+                          <label for="separated" class="radioLabel"><strong>Separated</strong>: Separados</label>
+                        </div>
+                        <div class="statusCol">
+                          <input
+                            type="radio"
+                            name="parents_marital_status"
+                            id="divorced"
+                            class="divorced"
+                            value="Divorced"
+                            readonly=""
+                            disabled=""
+                          />
+                          <label for="divorced" class="radioLabel"><strong>Divorced</strong>: Divorciados</label>
+                        </div>
+                        <div class="statusCol">
+                          <input
+                            type="radio"
+                            name="parents_marital_status"
+                            id="widowed"
+                            class="widowed"
+                            value="Widowed"
+                            readonly=""
+                            disabled=""
+                          />
+                          <label for="widowed" class="radioLabel"><strong>Widowed</strong>: Viudo/a</label>
+                        </div>
+                        <div class="statusCol">
+                          <input
+                            type="radio"
+                            name="parents_marital_status"
+                            id="single"
+                            class="single"
+                            value="Single"
+                            readonly=""
+                            disabled=""
+                          />
+                          <label for="single" class="radioLabel"><strong>Single</strong>: Soltero/a</label>
+                        </div>
+                        <div class="statusCol">
+                          <input
+                            type="radio"
+                            name="parents_marital_status"
+                            id="single_parent_family"
+                            class="single_parent_family"
+                            value="Single Parent Family"
+                            readonly=""
+                            disabled=""
+                          />
+                          <label for="single_parent_family" class="radioLabel single_parent_family"
+                            ><strong>Single-Parent Family</strong>: Familia monoparental</label
+                          >
+                        </div>
+                      </div>
+                      <p id="parents_marital_status_error" class="parents_marital_status_empty err_msg_hide err_msg">
+                        *Please check the required field
+                      </p>
+                    </div>
+                    <div
+                      id="father_mother_address"
+                      class="accFormField seperateAddress fullFexwidth"
+                      style="display: none"
+                    >
+                      <div class="father_address for_flex_one">
+                        <label for="father_address">
+                          <div class="labelWrapper">
+                            <strong
+                              >Father address
+                              <span class="spanTextNormal"> : Domicilio del Padre </span>
+                              <span class="required-star">*</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <input
+                          type="text"
+                          name="father_address"
+                          id="father_address"
+                          class="father_address_filed"
+                          readonly=""
+                        />
+                        <p id="father_address_error" class="father_address_err_msg err_msg_hide err_msg">
+                          *Please fill the address
+                        </p>
+                      </div>
+                      <div class="mother_address for_flex_one">
+                        <label for="mother_address">
+                          <div class="labelWrapper">
+                            <strong
+                              >Mother address
+                              <span class="spanTextNormal"> : Domicilio de la Madre </span>
+                              <span class="required-star">*</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <input
+                          type="text"
+                          name="mother_address"
+                          id="mother_address"
+                          class="mother_address_filed"
+                          readonly=""
+                        />
+                        <p id="mother_address_error" class="mother_address_err_msg err_msg_hide err_msg">
+                          *Please fill the address
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accFormField for_flex_one for_flex_one_fl_wt legalCustody">
+                      <label for="divorced_or_separated" class="divorced_or_separated"
+                        ><strong>Legal Custody (if divorced / separated)</strong>: Custodia legal (si divorcio /
+                        separación)</label
+                      >
+                      <input
+                        type="text"
+                        name="divorced_or_separated"
+                        id="divorced_or_separated"
+                        class="divorced_or_separated"
+                        readonly=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion-item accordion4 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle">Point of Contact/ Punto de Contacto</span>
+            </div>
+            <div class="accordion-content">
+              <span class="accTitle mergedFormTitle">
+                First Point of Contact / Primera Persona de Contacto
+                <br />
+                <span class="font_size_reduce">
+                  ( Parent or Tutor / Padre, Madre o Tutor/a) Please note we will assume the First Point of Contact as
+                  NEXT OF KIN. / Tengan en cuenta que utilizaremos a esta persona como CONTACTO PRIORITARIO.
+                </span>
+              </span>
+              <form id="form4" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="for_flex accFormFlex accForm4">
+                    <div class="accFormField for_flex_one">
+                      <label for="ft_pt_cnt_fname">
+                        <div class="labelWrapper">
+                          <strong
+                            >First Name(s) <span class="spanTextNormal"> : Nombre (s)</span>
+                            <span class="required-star">*</span>
+                          </strong>
+                        </div>
+                      </label>
+                      <input
+                        type="text"
+                        id="ft_pt_cnt_fname"
+                        name="ft_pt_cnt_fname"
+                        class="ft_pt_cnt_fname field_required"
+                        readonly=""
+                      />
+                      <p id="ft_pt_cnt_fname_error" class="fname_empty err_msg_hide err_msg">
+                        *Please enter the First Name
+                      </p>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="ft_pt_cnt_lname">
+                        <div class="labelWrapper">
+                          <strong
+                            >Last Name(s)
+                            <span class="spanTextNormal"> : Apellido(s)</span>
+                            <span class="required-star">*</span>
+                          </strong>
+                        </div>
+                      </label>
+                      <input
+                        type="text"
+                        id="ft_pt_cnt_lname"
+                        name="ft_pt_cnt_lname"
+                        class="ft_pt_cnt_lname field_required"
+                        readonly=""
+                      />
+                      <p id="ft_pt_cnt_lname_error" class="lname_empty err_msg_hide err_msg">
+                        *Please enter the Last Name
+                      </p>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="ft_pt_cnt_lname">
+                        <div class="labelWrapper">
+                          <strong
+                            >Email
+                            <span class="spanTextNormal"> : Dirección de Email</span>
+                          </strong>
+                        </div>
+                      </label>
+                      <input type="text" id="ft_pt_email" name="ft_pt_email" class="ft_pt_email" readonly="" />
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="rl_wt_stn">
+                        <div class="labelWrapper">
+                          <strong
+                            >Relationship with student
+                            <span class="spanTextNormal">: Relación con el alumno</span>
+                          </strong>
+                        </div>
+                      </label>
+                      <select name="rl_wt_stn" id="rl_wt_stn" class="rl_wt_stn" disabled="">
+                        <option value="" disabled="" selected="selected">Please Select</option>
+                        <option value="Mother">Mother / Madre</option>
+                        <option value="Father">Father / Padre</option>
+                        <option value="Custodian">Custodian / Guardián</option>
+                        <option value="Other">Other / Otro</option>
+                        <option value="Grandparent">Grandparent / Abuelo o Abuela</option>
+                        <option value="Other Family">Other Family / Otro miembro de la familia</option>
+                        <!-- <option value="Step Mother">Step Mother / Madrastra </option>
+                        <option value="Step Father">Step Father / Padrastro</option> -->
+                      </select>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="ft_pt_cnt_dob"
+                        ><strong>Date of Birth</strong>: Fecha de Nacimiento <span class="required-star">*</span></label
+                      >
+                      <input
+                        type="date"
+                        id="ft_pt_cnt_dob"
+                        name="ft_pt_cnt_dob"
+                        class="ft_pt_cnt_dob field_required"
+                        readonly=""
+                      />
+                      <p id="ft_pt_cnt_dob_error" class="dob_empty err_msg_hide err_msg">
+                        *Please enter the Date of Birth
+                      </p>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="ft_pt_cnt_nationality"><strong>Nationality</strong>:Nacionalidad</label>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="ft_pt_cnt_pp_num"><strong>Passport Number</strong>: D.N.I. / Pasaporte</label>
+                      <input
+                        type="text"
+                        id="ft_pt_cnt_pp_num"
+                        name="ft_pt_cnt_pp_num"
+                        class="ft_pt_cnt_pp_num"
+                        readonly=""
+                      />
+                    </div>
+                    <div class="accFormField for_flex_one phnum-drwpn fpcnt">
+                      <label for="ft_pt_cnt_num"
+                        ><strong>Telephone(s) No</strong>: Teléfono(s) <span class="required-star">*</span></label
+                      >
+                      <div class="phone-selectinput">
+                        <div class="intl-tel-input allow-dropdown separate-dial-code iti-sdc-3">
+                          <div class="flag-container">
+                            <div class="selected-flag" tabindex="0" title="India (भारत): +91">
+                              <div class="iti-flag in"></div>
+                              <div class="selected-dial-code">+91</div>
+                              <div class="iti-arrow"></div>
+                            </div>
+                          </div>
+                          <input
+                            type="tel"
+                            id="phone"
+                            name="form-control ft_pt_cnt_num"
+                            class="ft_pt_cnt_num field_required phoneNumber"
+                            readonly=""
+                            autocomplete="off"
+                            placeholder="99876 54321"
+                          />
+                        </div>
+                        <p id="phone_error" class="ft_pt_cnt_num_empty err_msg_hide err_msg">
+                          *Please enter telephone number
+                        </p>
+                        <span id="valid-msg1" class="hide phoneValid">Valid</span>
+                        <span id="error-msg1" class="hide phoneInvalid">Invalid number</span>
+                      </div>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="ft_pt_cnt_cmp">
+                        <div class="labelWrapper">
+                          <strong
+                            >Profession &amp; Company
+                            <span class="spanTextNormal">: Profesión y Empresa</span>
+                          </strong>
+                        </div>
+                      </label>
+                      <input type="text" id="ft_pt_cnt_cmp" name="ft_pt_cnt_cmp" class="ft_pt_cnt_cmp" readonly="" />
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <span class="accTitle mergedFormTitle secPointofCon">
+                Second Point of Contact / Segunda Persona de Contacto
+                <span class="font_size_reduce"> (Parent or Tutor / Padre, Madre o Tutor/a) </span>
+              </span>
+              <form id="form5" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="for_flex accFormFlex accForm5">
+                    <div class="accFormField for_flex_one">
+                      <label for="sd_pt_cnt_fname">
+                        <div class="labelWrapper">
+                          <strong
+                            >First Name(s)
+                            <span class="spanTextNormal"> : Nombre (s) </span>
+                            <span class="required-star">*</span>
+                          </strong>
+                        </div>
+                      </label>
+                      <input
+                        type="text"
+                        id="sd_pt_cnt_fname"
+                        name="sd_pt_cnt_fname"
+                        class="sd_pt_cnt_fname field_required"
+                        readonly=""
+                      />
+                      <p id="sd_pt_cnt_fname_error" class="sd_pt_cnt_fname_empty err_msg_hide err_msg">
+                        *Please enter the First Name
+                      </p>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="sd_pt_cnt_lname">
+                        <div class="labelWrapper">
+                          <strong
+                            >Last Name(s)
+                            <span class="spanTextNormal"> : Apellido(s) </span>
+                            <span class="required-star">*</span>
+                          </strong>
+                        </div>
+                      </label>
+                      <input
+                        type="text"
+                        id="sd_pt_cnt_lname"
+                        name="sd_pt_cnt_lname"
+                        class="sd_pt_cnt_lname field_required"
+                        readonly=""
+                      />
+                      <p id="sd_pt_cnt_lname_error" class="sd_pt_cnt_lname_empty err_msg_hide err_msg">
+                        *Please enter the Last Name
+                      </p>
+                    </div>
+                    <div class="accFormField for_flex_one fullWidth">
+                      <label for="sd_pt_cnt_lname">
+                        <div class="labelWrapper">
+                          <strong>Email <span class="spanTextNormal"> : Dirección de Email </span> </strong>
+                        </div>
+                      </label>
+                      <input
+                        type="text"
+                        id="sd_pt_cnt_email"
+                        name="sd_pt_cnt_email"
+                        class="sd_pt_cnt_email"
+                        readonly=""
+                      />
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="sd_rl_wt_stn">
+                        <div class="labelWrapper">
+                          <strong
+                            >Relationship with student
+                            <span class="spanTextNormal"> : Relación con el alumno</span>
+                          </strong>
+                        </div>
+                      </label>
+                      <select name="sd_rl_wt_stn" id="sd_rl_wt_stn" class="sd_rl_wt_stn" disabled="">
+                        <option value="" disabled="" selected="">Please Select</option>
+                        <option value="Mother">Mother/Madre</option>
+                        <option value="Father">Father/Padre</option>
+                        <option value="Custodian">Custodian/Guardián</option>
+                        <option value="Other">Other/Otro</option>
+                        <option value="Grandparent">Grandparent/Abuelo o Abuela</option>
+                        <option value="Other Family">Other Family/Otro miembro de la familia</option>
+                        <!-- <option value="Step Mother">Step Mother/Madrastra </option>
+                        <option value="Step Father">Step Father/Padrastro </option> -->
+                      </select>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="sd_pt_cnt_dob"
+                        ><strong>Date of Birth</strong>: Fecha de Nacimiento <span class="required-star">*</span></label
+                      >
+                      <input
+                        type="date"
+                        id="sd_pt_cnt_dob"
+                        name="sd_pt_cnt_dob"
+                        class="sd_pt_cnt_dob field_required"
+                        readonly=""
+                      />
+                      <p id="sd_pt_cnt_dob_error" class="sd_pt_cnt_dob_empty err_msg_hide err_msg">
+                        *Please enter the Date of Birth
+                      </p>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="sd_pt_cnt_nationality"><strong>Nationality</strong>:Nacionalidad</label>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="sd_pt_cnt_pp_num"><strong>Passport Number</strong>: D.N.I. / Pasaporte</label>
+                      <input
+                        type="text"
+                        id="sd_pt_cnt_pp_num"
+                        name="sd_pt_cnt_pp_num"
+                        class="sd_pt_cnt_pp_num"
+                        readonly=""
+                      />
+                    </div>
+                    <div class="accFormField for_flex_one phnum-drwpn spcnt">
+                      <label for="sd_pt_cnt_num"
+                        ><strong>Telephone(s) No</strong>: Teléfono(s) <span class="required-star">*</span></label
+                      >
+                      <div class="phone-selectinput">
+                        <div class="intl-tel-input allow-dropdown separate-dial-code iti-sdc-3">
+                          <div class="flag-container">
+                            <div class="selected-flag" tabindex="0" title="India (भारत): +91">
+                              <div class="iti-flag in"></div>
+                              <div class="selected-dial-code">+91</div>
+                              <div class="iti-arrow"></div>
+                            </div>
+                          </div>
+                          <input
+                            type="tel"
+                            id="sd_pt_cnt_num"
+                            name="sd_pt_cnt_num"
+                            class="sd_pt_cnt_num field_required secondphoneNumber"
+                            readonly=""
+                            autocomplete="off"
+                            placeholder="99876 54321"
+                          />
+                        </div>
+                        <p id="sd_pt_cnt_num_error" class="sd_pt_cnt_num_empty err_msg_hide err_msg">
+                          *Please enter telephone number
+                        </p>
+                        <span id="valid-msg2" class="hide phoneValid">Valid</span>
+                        <span id="error-msg2" class="hide phoneInvalid">Invalid number</span>
+                      </div>
+                    </div>
+                    <div class="accFormField for_flex_one">
+                      <label for="sd_pt_cnt_cmp">
+                        <div class="labelWrapper">
+                          <strong
+                            >Profession &amp; Company
+                            <span class="spanTextNormal"> : Profesión y Empresa </span>
+                          </strong>
+                        </div>
+                      </label>
+                      <input type="text" id="sd_pt_cnt_cmp" name="sd_pt_cnt_cmp" class="sd_pt_cnt_cmp" readonly="" />
+                    </div>
+                    <div class="accFormField for_radio"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="accordion-item accordion6 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> Academic Details / Datos Académicos</span>
+            </div>
+            <div class="accordion-content">
+              <form id="form6" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="new_for_flex_outer accFormFlex accForm6">
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="expt_sty_schl">
+                          <div class="labelWrapper">
+                            <strong
+                              >Expected Stay in School
+                              <span class="spanTextNormal"> : Años previstos en el colegio</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <input
+                          type="text"
+                          id="expt_sty_schl"
+                          name="expt_sty_schl"
+                          class="whitespace-nowrap"
+                          readonly=""
+                        />
+                      </div>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="prvs_ed_sys">
+                          <div class="labelWrapper">
+                            <strong
+                              >Previous Education System
+                              <span class="spanTextNormal"> : Sistema educativo anterior</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <input type="text" id="prvs_ed_sys" name="prvs_ed_sys" class="prvs_ed_sys" readonly="" />
+                      </div>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="repeated_schl_year">
+                          <div class="labelWrapper">
+                            <strong
+                              >Repeated School Years
+                              <span class="spanTextNormal"> : Cursos repetidos</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <!--                         <input type="number" id="repeated_schl_year" name="repeated_schl_year" class="RepeatedSchool" readonly> -->
+                        <select name="repeated_schl_year" id="repeated_schl_year" class="RepeatedSchool" disabled="">
+                          <option value="" disabled="" selected="">Please Select</option>
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion-item accordion7 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> Previous School(s) / Colegio(s) Anterior(es)</span>
+            </div>
+            <div class="accordion-content">
+              <form id="form7" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="new_for_flex_outer accFormFlex accForm7">
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="prvs_schl"
+                          ><strong>Previous School</strong>:Colegio anterior <span class="required-star">*</span></label
+                        >
+                        <input
+                          type="text"
+                          id="prvs_schl"
+                          name="prvs_schl"
+                          class="prvs_schl field_required"
+                          readonly=""
+                        />
+                      </div>
+                      <p id="prvs_schl_error" class="fname_empty err_msg_hide err_msg">*Please enter the school name</p>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="twn_nm"
+                          ><strong>Town &amp; Country</strong>: Localidad &amp; país
+                          <span class="required-star">*</span></label
+                        >
+                        <input type="text" id="twn_nm" name="twn_nm" class="twn_nm field_required" readonly="" />
+                      </div>
+                      <p id="twn_nm_error" class="lname_empty err_msg_hide err_msg">
+                        *Please enter the town/country name
+                      </p>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="cnt_prs"
+                          ><strong>Contact Person</strong>: Persona de contacto
+                          <span class="required-star">*</span></label
+                        >
+                        <input type="text" id="cnt_prs" name="cnt_prs" class="cnt_prs field_required" readonly="" />
+                      </div>
+                      <p id="cnt_prs_error" class="sd_pt_cnt_fname_empty err_msg_hide err_msg">
+                        *Please enter the name
+                      </p>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flexw_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="prvs_schl_eml"
+                          ><strong>Email</strong>: Dirección email <span class="required-star">*</span></label
+                        >
+                        <input
+                          type="text"
+                          id="prvs_schl_eml"
+                          name="prvs_schl_eml field_required"
+                          class="prvs_schl_eml field_required"
+                          readonly=""
+                        />
+                      </div>
+                      <p id="prvs_schl_eml_format_error" class="prvs_schl_num_val_err err_msg_hide err_msg">
+                        Please follow email format Ex:'abcd1234@gmail.com'
+                      </p>
+                      <p id="prvs_schl_eml_error" class="email_empty_prvs_schl err_msg_hide err_msg">
+                        *Please enter the Email
+                      </p>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flex phnum-drwpn prvs_schl_numCol">
+                      <label for="prvs_schl_num"
+                        ><strong>Telephone</strong>: Teléfono <span class="required-star">*</span></label
+                      >
+                      <div class="phone-selectinput">
+                        <div class="intl-tel-input allow-dropdown separate-dial-code iti-sdc-3">
+                          <div class="flag-container">
+                            <div class="selected-flag" tabindex="0" title="India (भारत): +91">
+                              <div class="iti-flag in"></div>
+                              <div class="selected-dial-code">+91</div>
+                              <div class="iti-arrow"></div>
+                            </div>
+                          </div>
+                          <input
+                            type="tel"
+                            id="prvs_schl_num"
+                            name="prvs_schl_num field_required"
+                            class="prvs_schl_num field_required thirdphoneNumber"
+                            readonly=""
+                            autocomplete="off"
+                            placeholder="99876 54321"
+                          />
+                        </div>
+                        <p id="prvs_schl_num_error" class="prvs_schl_num_empty err_msg_hide err_msg">
+                          *Please enter telephone number
+                        </p>
+                        <span id="valid-msg3" class="hide phoneValid">Valid</span>
+                        <span id="error-msg3" class="hide phoneInvalid">Invalid number</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

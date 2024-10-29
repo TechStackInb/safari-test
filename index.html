@@ -1,106 +1,16 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Node.js Server</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-      }
-      .container {
-        text-align: center;
-      }
-      h1 {
-        color: #333;
-      }
-      img {
-        width: 200px;
-        height: auto;
-      }
-      #loader {
-        display: none;
-        text-align: center;
-        margin-top: 20px;
-      }
-      @media print {
-        .page-break {
-          page-break-before: always;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container" id="content">
-      <h1>Hello</h1>
-      <p>This is a simple HTML page served by Node.js, with an image and PDF export functionality.</p>
-      <img id="exampleImage" src="/image.png" alt="Example Image" />
-
-      <section>
-        <h2>About Us</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet turpis vel sem commodo gravida.
-          Nullam in semper mauris. Nulla interdum suscipit velit a tincidunt. Sed vitae metus ipsum. Vivamus vitae orci
-          nec augue ultricies hendrerit. Pellentesque at cursus felis.
-        </p>
-      </section>
-
-      <section>
-        <h2>Our Services</h2>
-        <ul>
-          <li>Service 1: Lorem ipsum dolor sit amet</li>
-          <li>Service 2: Vivamus suscipit orci nec ultricies malesuada</li>
-          <li>Service 3: Donec eget nulla ut sapien sollicitudin malesuada</li>
-          <li>Service 4: Curabitur accumsan dui et ex iaculis luctus</li>
-          <li>Service 5: Cras vel ligula et odio dapibus consequat</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Gallery</h2>
-        <img src="/image.png" alt="Example Image" />
-        <img src="/image.png" alt="Example Image" />
-        <img src="/image.png" alt="Example Image" />
-      </section>
-
-      <section>
-        <h2>Contact Us</h2>
-        <p>
-          You can reach us at:
-          <strong>Email:</strong> example@example.com<br />
-          <strong>Phone:</strong> +123-456-7890
-        </p>
-        <p>Address: 123 Example Street, Example City, EX 45678</p>
-      </section>
-
-      <footer>
-        <p>&copy; 2024 Simple Node.js Server. All rights reserved.</p>
-      </footer>
-    </div>
-
-    <button id="download">Download PDF</button>
-    <div id="loader">Generating PDF, please wait...</div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-    <script src="index.js"></script>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
   <body>
     <button id="downloadButton">DOWNLOAD PDF</button>
-    <div class="registrationForm-inner form-dt" id="formONE">
+
+    <div class="registrationForm-inner form-dt" id="formONE" style="display: block">
       <div class="registrationForm-right">
         <div class="accordion">
           <div class="accordion-item accordion1 tab">
@@ -120,25 +30,11 @@
                 <div class="initial_details accFormFlex accForm1">
                   <div class="initial_details_tab accFormField">
                     <label for="schl_year"><strong>School Year</strong> / Curso Date / Fecha</label>
-                    <select name="schl_year" id="schl_year" class="schl_year field_required" disabled="" readonly="">
-                      <option value="" disabled="" selected="">Please Select</option>
-                      <option value="2024-2025">2024-2025</option>
-                      <option value="2025-2026">2025-2026</option>
-                      <option value="2026-2027">2026-2027</option>
-                      <option value="2027-2028">2027-2028</option>
-                    </select>
-                    <p id="schl_year_error" class="schl_year_empty err_msg_hide err_msg">*Please enter the value</p>
+                    <input value="9348-48489-443" />
                   </div>
                   <div class="initial_details_tab accFormField">
                     <label for="join_date"><strong>Joining Date</strong> / Fecha Incorporación</label>
-                    <input
-                      type="date"
-                      id="join_date"
-                      name="join_date"
-                      class="join_date field_required"
-                      min="2023-01-01"
-                      readonly=""
-                    />
+                    <input value="23-44-4549" id="join_date" class="join_date field_required" readonly="" />
                     <p id="join_date_error" class="join_date_empty err_msg_hide err_msg">*Please enter the value</p>
                   </div>
                 </div>
@@ -183,7 +79,111 @@
                       <input type="text" id="lname" name="lname" class="lname field_required" readonly="" />
                       <p id="lname_error" class="lname_empty err_msg_hide err_msg">*Please enter the Last Name</p>
                     </div>
-
+                    <div class="for_radio genderOuter accFormField">
+                      <p class="gender_opt">
+                        <span class="labelWrapper">
+                          <strong
+                            >Gender <span class="spanTextNormal">: Sexo</span>
+                            <span class="required-star">*</span></strong
+                          >
+                        </span>
+                      </p>
+                      <div class="for_radio_content_padding">
+                        <div class="for_space"></div>
+                        <div class="genderFlexOuter">
+                          <div class="genderFlex">
+                            <input
+                              type="radio"
+                              id="male"
+                              name="gender"
+                              class="male"
+                              value="Male"
+                              disabled=""
+                              readonly=""
+                            />
+                            <label for="male" class="radioLabel">Male (Masculino)</label>
+                          </div>
+                          <div class="genderFlex">
+                            <input
+                              type="radio"
+                              id="female"
+                              name="gender"
+                              class="female"
+                              value="Female"
+                              disabled=""
+                              readonly=""
+                            />
+                            <label for="female" class="radioLabel">Female (Femenino)</label>
+                          </div>
+                        </div>
+                        <div class="gender_symbol">
+                          <p style="display: inline-block">(H)</p>
+                          <p style="display: inline-block">(M)</p>
+                        </div>
+                        <p id="gender_error" class="gender_empty err_msg_hide err_msg">
+                          *Please check the required field
+                        </p>
+                      </div>
+                    </div>
+                    <div class="for_flex_one accFormField">
+                      <label for="email"
+                        ><strong>Email</strong>: Dirección email <span class="required-star">*</span></label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="email field_required to_cover_filed"
+                        readonly=""
+                      />
+                      <p id="email_format_error" class="email_error_msg err_msg_hide err_msg">
+                        Please follow email format Ex:'abcd1234@gmail.com'
+                      </p>
+                      <p id="email_error" class="email_empty err_msg_hide err_msg">*Please enter the Email</p>
+                    </div>
+                    <div class="for_flex_one accFormField">
+                      <label for="dob">
+                        <div class="labelWrapper">
+                          <strong
+                            >Date of Birth
+                            <span class="spanTextNormal">: Fecha de Nacimiento </span>
+                            <span class="required-star">*</span>
+                          </strong>
+                        </div>
+                      </label>
+                      <input type="date" id="dob" name="dob" class="dob field_required" readonly="" />
+                      <p id="dob_error" class="dob_empty err_msg_hide err_msg">*Please enter the Date of Birth</p>
+                    </div>
+                    <div class="for_flex_one accFormField">
+                      <label for="city_birth_id">
+                        <div class="labelWrapper">
+                          <strong>City of Birth <span class="spanTextNormal">: Ciudad de Nacimiento</span></strong>
+                        </div>
+                      </label>
+                      <input type="text" id="city_birth_id" name="city_birth" class="city_birth" readonly="" />
+                      <br />
+                    </div>
+                    <div class="for_flex_one accFormField">
+                      <div id="for_space">
+                        <label class="sipLabel" for="sip_number">
+                          <div class="labelWrapper">
+                            <strong
+                              >SIP Number or TSE / EHIC or Private Health Card
+                              <span class="spanTextNormal"> : Número de SIP o Tarjeta Sanitaria Privada </span>
+                            </strong>
+                          </div>
+                        </label>
+                      </div>
+                      <input type="text" id="sip_number" name="sip_number" class="sip_number" readonly="" />
+                    </div>
+                    <div class="for_flex_one accFormField">
+                      <label for="nationality"><strong>Nationality</strong>: Nacionalidad</label>
+                      <input value="Indian" />
+                    </div>
+                    <div class="for_flex_one accFormField">
+                      <label for="pp_num"><strong>Passport Number</strong>: D.N.I. / Pasaporte</label>
+                      <input type="text" id="pp_num" name="pp_num" class="pp_num" readonly="" />
+                    </div>
                     <div class="for_flex_one accFormField">
                       <label for="hm_adrs"><strong>Home Address</strong>: Domicilio</label>
                       <input type="text" id="hm_adrs" name="hm_adrs" class="hm_adrs" readonly="" />
@@ -376,6 +376,18 @@
                         </span>
                       </p>
                       <div class="for_radio_content_padding">
+                        <div class="statusCol">
+                          <input
+                            type="radio"
+                            name="parents_marital_status"
+                            id="married"
+                            class="married"
+                            value="Married"
+                            readonly=""
+                            disabled=""
+                          />
+                          <label for="married" class="radioLabel"><strong>Married</strong>: Casados</label>
+                        </div>
                         <div class="statusCol">
                           <input
                             type="radio"
@@ -592,17 +604,7 @@
                           </strong>
                         </div>
                       </label>
-                      <select name="rl_wt_stn" id="rl_wt_stn" class="rl_wt_stn" disabled="">
-                        <option value="" disabled="" selected="selected">Please Select</option>
-                        <option value="Mother">Mother / Madre</option>
-                        <option value="Father">Father / Padre</option>
-                        <option value="Custodian">Custodian / Guardián</option>
-                        <option value="Other">Other / Otro</option>
-                        <option value="Grandparent">Grandparent / Abuelo o Abuela</option>
-                        <option value="Other Family">Other Family / Otro miembro de la familia</option>
-                        <!-- <option value="Step Mother">Step Mother / Madrastra </option>
-                        <option value="Step Father">Step Father / Padrastro</option> -->
-                      </select>
+                      <input value="Dad" />
                     </div>
                     <div class="accFormField for_flex_one">
                       <label for="ft_pt_cnt_dob"
@@ -621,6 +623,7 @@
                     </div>
                     <div class="accFormField for_flex_one">
                       <label for="ft_pt_cnt_nationality"><strong>Nationality</strong>:Nacionalidad</label>
+                      <input value="Indian" />
                     </div>
                     <div class="accFormField for_flex_one">
                       <label for="ft_pt_cnt_pp_num"><strong>Passport Number</strong>: D.N.I. / Pasaporte</label>
@@ -645,15 +648,7 @@
                               <div class="iti-arrow"></div>
                             </div>
                           </div>
-                          <input
-                            type="tel"
-                            id="phone"
-                            name="form-control ft_pt_cnt_num"
-                            class="ft_pt_cnt_num field_required phoneNumber"
-                            readonly=""
-                            autocomplete="off"
-                            placeholder="99876 54321"
-                          />
+                          <input value="74747839393" class="ft_pt_cnt_num field_required phoneNumber" readonly="" />
                         </div>
                         <p id="phone_error" class="ft_pt_cnt_num_empty err_msg_hide err_msg">
                           *Please enter telephone number
@@ -748,17 +743,7 @@
                           </strong>
                         </div>
                       </label>
-                      <select name="sd_rl_wt_stn" id="sd_rl_wt_stn" class="sd_rl_wt_stn" disabled="">
-                        <option value="" disabled="" selected="">Please Select</option>
-                        <option value="Mother">Mother/Madre</option>
-                        <option value="Father">Father/Padre</option>
-                        <option value="Custodian">Custodian/Guardián</option>
-                        <option value="Other">Other/Otro</option>
-                        <option value="Grandparent">Grandparent/Abuelo o Abuela</option>
-                        <option value="Other Family">Other Family/Otro miembro de la familia</option>
-                        <!-- <option value="Step Mother">Step Mother/Madrastra </option>
-                        <option value="Step Father">Step Father/Padrastro </option> -->
-                      </select>
+                      <input value="Parent" />
                     </div>
                     <div class="accFormField for_flex_one">
                       <label for="sd_pt_cnt_dob"
@@ -777,11 +762,12 @@
                     </div>
                     <div class="accFormField for_flex_one">
                       <label for="sd_pt_cnt_nationality"><strong>Nationality</strong>:Nacionalidad</label>
+                      <input value="Indian" />
                     </div>
                     <div class="accFormField for_flex_one">
                       <label for="sd_pt_cnt_pp_num"><strong>Passport Number</strong>: D.N.I. / Pasaporte</label>
                       <input
-                        type="text"
+                        value="73r788778378"
                         id="sd_pt_cnt_pp_num"
                         name="sd_pt_cnt_pp_num"
                         class="sd_pt_cnt_pp_num"
@@ -892,21 +878,7 @@
                             </strong>
                           </div>
                         </label>
-                        <!--                         <input type="number" id="repeated_schl_year" name="repeated_schl_year" class="RepeatedSchool" readonly> -->
-                        <select name="repeated_schl_year" id="repeated_schl_year" class="RepeatedSchool" disabled="">
-                          <option value="" disabled="" selected="">Please Select</option>
-                          <option value="0">0</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                        <input value="0" />
                       </div>
                     </div>
                   </div>
@@ -1000,21 +972,1070 @@
                               <div class="iti-arrow"></div>
                             </div>
                           </div>
-                          <input
-                            type="tel"
-                            id="prvs_schl_num"
-                            name="prvs_schl_num field_required"
-                            class="prvs_schl_num field_required thirdphoneNumber"
-                            readonly=""
-                            autocomplete="off"
-                            placeholder="99876 54321"
-                          />
+                          <input value="64747848859" class="prvs_schl_num field_required thirdphoneNumber" readonly />
                         </div>
                         <p id="prvs_schl_num_error" class="prvs_schl_num_empty err_msg_hide err_msg">
                           *Please enter telephone number
                         </p>
                         <span id="valid-msg3" class="hide phoneValid">Valid</span>
                         <span id="error-msg3" class="hide phoneInvalid">Invalid number</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion-item accordion8 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> Additional Learning Needs / Apoyo al Aprendizaje</span>
+            </div>
+            <div class="accordion-content">
+              <form id="form8" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="new_for_flex_outer accFormFlex accForm8">
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="label_for_space_one">
+                        <label for="ud_ln" class="aln-label">
+                          <div class="labelWrapper">
+                            <strong
+                              >Does your child have any undiagnosed specific learning needs, for example, speech,
+                              language and/or communication difficulties or listening and attention delay, emotional
+                              needs, behavioural needs?
+                              <span class="spanTextNormal"
+                                >¿Su hijo tiene alguna necesidad de aprendizaje específica no diagnosticada? Por
+                                ejemplo, lectura, atención, concentración, necesidades emocionales o de comportamiento
+                              </span>
+                            </strong>
+                          </div>
+                        </label>
+                      </div>
+                      <textarea id="ud_ln" name="ud_ln" class="ud_ln" rows="3" readonly=""></textarea>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="label_for_space_one">
+                        <label for="twn_nm" class="aln-label">
+                          <div class="labelWrapper">
+                            <strong
+                              >Does your child have any diagnosed specific learning needs, for example, dyslexia,
+                              dyscalculia, Autism Spectrum Disorder, Attention Deficit and Hyperactivity Disorder,
+                              working memory challenges?
+                              <span class="spanTextNormal">
+                                ¿Su hijo tiene alguna necesidad de aprendizaje específica diagnosticada? Por ejemplo,
+                                dislexia, discalculia, autismo, déficit de atención, hiperactividad, memoria.
+                              </span>
+                            </strong>
+                          </div>
+                        </label>
+                      </div>
+                      <textarea id="twn_nm1" name="twn_nm1" class="twn_nm1" rows="3" readonly=""></textarea>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="label_for_space_one">
+                        <label for="othr_dls" class="aln-label">
+                          <div class="labelWrapper">
+                            <strong
+                              >Are there any other details about your child's performance at school, emotional,
+                              behavioural and academic, that you feel it is important for us to know?
+                              <span class="spanTextNormal"
+                                >¿Hay alguna otra información que debamos conocer sobre el rendimiento de su hijo en el
+                                colegio, emocional, de comportamiento y/o académico?</span
+                              >
+                            </strong>
+                          </div>
+                        </label>
+                      </div>
+                      <textarea id="othr_dls" name="othr_dls" class="othr_dls" rows="3" readonly=""></textarea>
+                      <p class="email-error-msg err_msg_hide err_msg">
+                        Please follow email format Ex:'abcd1234@gmail.com'
+                      </p>
+                      <div class="for_radio"></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion-item accordion9 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> Languages / Lenguas</span>
+            </div>
+            <div class="accordion-content">
+              <form id="form9" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="new_for_flex_outer accFormFlex accForm8">
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="mthr_tng"
+                          ><strong>Mother Tongue</strong>: Lengua Materna <span class="required-star">*</span></label
+                        >
+                        <input type="text" id="mthr_tng" name="mthr_tng" class="mthr_tng field_required" readonly="" />
+                      </div>
+                      <p id="mthr_tng_error" class="fname_empty err_msg_hide err_msg">
+                        *Please enter the required field
+                      </p>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="eng_lvl"
+                          ><strong>Level of English</strong>: Nivel de Inglés
+                          <span class="required-star">*</span></label
+                        >
+                        <input value="5" />
+                      </div>
+                      <p id="eng_lvl_error" class="lname_empty err_msg_hide err_msg">
+                        *Please enter the required field
+                      </p>
+                    </div>
+                    <div class="accFormField fullFexwidth new_for_flex">
+                      <div class="inside_new_for_flex">
+                        <label for="spn_lvl"
+                          ><strong>Level of Spanish</strong>: Nivel de Espanol
+                          <span class="required-star">*</span></label
+                        >
+                        <input value="3" />
+                      </div>
+                      <p id="spn_lvl_error" class="sd_pt_cnt_fname_empty err_msg_hide err_msg">
+                        *Please enter the required field
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion-item accordion10 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> Facilities and Activities / Instalaciones y actividades</span>
+            </div>
+            <div class="accordion-content">
+              <span class="accTitle mergedFormTitle"> School Lunch / Comedor</span>
+              <form id="form10" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="for_flex">
+                    <div class="for_flex_one_diff for_top_padding">
+                      <div class="radio_y_n accFormFlex accForm10" id="one">
+                        <div class="accFormField fullFexwidth for_padding lunchWrap">
+                          <div class="lunchRadioWrap">
+                            <div class="lunchFlex">
+                              <input
+                                type="radio"
+                                name="schl_lunch_yes_no"
+                                id="schl_lunch_yes"
+                                class="schl_lunch_yes"
+                                value="Yes"
+                                readonly=""
+                                disabled=""
+                              />
+                              <label for="schl_lunch_yes" class="radioLabel"><strong>Yes </strong> (Si)</label>
+                            </div>
+                            <div class="lunchFlex">
+                              <input
+                                type="radio"
+                                name="schl_lunch_yes_no"
+                                id="schl_lunch_no"
+                                class="schl_lunch_no"
+                                value="No"
+                                readonly=""
+                                disabled=""
+                              />
+                              <label for="schl_lunch_no" class="radioLabel"><strong>No </strong> (No)</label>
+                            </div>
+                          </div>
+                          <p id="schl_lunch_error" class="schl_lunch_empty err_msg_hide err_msg">
+                            Please check the required field
+                          </p>
+                        </div>
+                        <div id="schl_lunch_details" class="accFormField fullFexwidth rqstDiet" style="display: none">
+                          <label for="rqstd_diet"><strong>Requested Diet</strong>: Dieta solicitada</label>
+                          <input value="Eggs" />
+                          <p id="required_diet_error" class="sd_pt_cnt_lname_empty err_msg_hide err_msg">
+                            *Please enter the requested diet
+                          </p>
+                          <p id="" class="for_padding for_top_padding">
+                            <strong>Available: STANDARD, VEGETARIAN+FISH, VEGETARIAN, VEGAN, NO PORK.</strong>
+                          </p>
+                          <p id="" class="for_padding for_bottom_padding">
+                            Opciones disponibles: NORMAL, VEGETARIANO+PESCADO, VEGETARIANO, VEGANO, SIN CERDO.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <span class="accTitle mergedFormTitle schoolBusTiltle"> School Bus / Autobus Escolar</span>
+              <form id="form11" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="new_for_flex_outer">
+                    <div class="radio_y_n" id="two">
+                      <div class="new_for_flex busRadioWrap accFormFlex">
+                        <div class="for_padding accFormField">
+                          <div class="busFlex">
+                            <input
+                              type="radio"
+                              name="schl_bus_yes_no"
+                              id="schl_bus_yes"
+                              class="schl_bus_yes"
+                              value="Yes"
+                              disabled=""
+                              readonly=""
+                            />
+                            <label for="schl_bus_yes" class="radioLabel"><strong>Yes</strong> (Si)</label>
+                          </div>
+                          <div class="busFlex">
+                            <input
+                              type="radio"
+                              name="schl_bus_yes_no"
+                              id="schl_bus_no"
+                              class="schl_bus_no"
+                              value="No"
+                              disabled=""
+                              readonly=""
+                            />
+                            <label for="schl_bus_no" class="radioLabel"><strong>No</strong> (No)</label>
+                          </div>
+                        </div>
+                        <p id="school_bus_error" class="schl_bus_empty err_msg_hide err_msg">
+                          Please check one of the value
+                        </p>
+                      </div>
+                      <div id="schl_bus_details" class="busHideShow accFormFlex">
+                        <div class="accFormField new_for_flex">
+                          <div class="inside_new_for_flex removeFlex">
+                            <label for="eft_date"><strong>Effective Date</strong>: Fecha efecto</label>
+                            <input type="date" id="eft_date" name="eft_date" class="eft_date" readonly="" />
+                          </div>
+                          <p id="effective_date_error" class="eft_date_empty err_msg_hide err_msg">
+                            *Please enter the Date
+                          </p>
+                        </div>
+                        <div class="accFormField new_for_flex">
+                          <div class="inside_new_for_flex">
+                            <label for="bus_ln">
+                              <div class="labelWrapper">
+                                <strong
+                                  >Bus Line
+                                  <span class="spanTextNormal">
+                                    : Línea de bus (desplegable y link con las rutas)
+                                  </span>
+                                </strong>
+                              </div>
+                            </label>
+                            <input type="text" id="bus_ln" name="bus_ln" class="bus_ln" readonly="" />
+                          </div>
+                          <p id="bus_line_error" class="bus_ln_empty err_msg_hide err_msg">
+                            *Please enter the bus lane
+                          </p>
+                        </div>
+                        <div class="accFormField new_for_flex">
+                          <div class="inside_new_for_flex">
+                            <label for="bus_stop"><strong>Bus Stop</strong>: Parada de bus</label>
+                            <input type="text" id="bus_stop" name="bus_stop" class="bus_stop" readonly="" />
+                          </div>
+                          <p id="bus_stop_error" class="bus_stop_empty err_msg_hide err_msg">*Please enter bus stop</p>
+                        </div>
+                        <div class="accFormField new_for_flex">
+                          <div class="inside_new_for_flex">
+                            <label for="one_way_to_school" class="one_way_to_school"
+                              ><strong>One way to school / One way from school / Both ways to and from school:</strong>
+                              Ruta hacia el colegio / Ruta desde el colegio / Ruta de ida y Vuelta al colegio</label
+                            >
+                            <input value="Yes" />
+                          </div>
+                          <p id="one_way_to_school_error" class="one_way_to_school_empty err_msg_hide err_msg">
+                            *Please enter value
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <span class="accTitle mergedFormTitle afterSchoolTitle"> After School / Extraescolares</span>
+              <form id="form12" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="new_for_flex_outer">
+                    <div class="new_for_flex accFormFlex accForm12">
+                      <p class="accFormField fullFexwidth afterSchool">
+                        <span class="labelWrapper">
+                          <strong
+                            >Choose the three favourite activities of your child
+                            <span class="spanTextNormal">
+                              : Elige las tres actividades favoritas para tu hijo/a (uno por niño)</span
+                            >
+                          </strong>
+                        </span>
+                      </p>
+                      <div class="accFormField fullFexwidth inside_new_for_flex">
+                        <label for="activity_one"><strong>1. Activity</strong>: Actividad</label>
+                        <input type="text" id="activity_one" name="activity_one" class="activity_one" readonly="" />
+                        <p id="activity_one_error" class="sd_pt_cnt_lname_empty err_msg_hide err_msg">
+                          *Please enter value
+                        </p>
+                      </div>
+                      <div class="accFormField fullFexwidth inside_new_for_flex">
+                        <label for="activity_two"><strong>2. Activity</strong>: Actividad</label>
+                        <input type="text" id="activity_two" name="activity_two" class="activity_two" readonly="" />
+                        <p id="activity_two_error" class="sd_pt_cnt_fname_empty err_msg_hide err_msg">
+                          *Please enter value
+                        </p>
+                      </div>
+                      <div class="accFormField fullFexwidth inside_new_for_flex">
+                        <label for="activity_three"><strong>3. Activity</strong>: Actividad</label>
+                        <input
+                          type="text"
+                          id="activity_three"
+                          name="activity_three"
+                          class="activity_three"
+                          readonly=""
+                        />
+                        <p id="activity_three_error" class="sd_pt_cnt_fname_empty err_msg_hide err_msg">
+                          *Please enter value
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="accordion-item accordion13 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> In Case Of Emergency / En Caso de Urgencia</span>
+            </div>
+            <div class="accordion-content">
+              <form id="form13" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer new_for_flex_outer">
+                  <div class="medicalAuthorisation">
+                    <div class="label_for_space_one inCaseofEmergency">
+                      <label for="fname">
+                        <div class="labelWrapper">
+                          <strong
+                            >Contact Person (Name, Telephone and Relationship with student).
+                            <span class="spanTextNormal">
+                              Persona de contacto prioritaria (Nombre, teléfono y relación con el alumno)</span
+                            >
+                            <span class="required-star">*</span>
+                          </strong>
+                        </div>
+                      </label>
+                    </div>
+                    <input
+                      type="text"
+                      id="contact_person"
+                      name="contact_person"
+                      class="contact_person field_required"
+                      readonly=""
+                    />
+                    <p id="contact_person_error" class="fname_empty err_msg_hide err_msg">*Please enter the values</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion-item accordion14 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> Medical Details and Authorization / Historia y Autorización Médica </span>
+            </div>
+            <div class="accordion-content">
+              <span class="accTitle mergedFormTitle"> Medical Authorization / Autorizacion Medica </span>
+              <form id="form14" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer">
+                  <div class="new_for_flex_outer">
+                    <div class="medicalAuthorisation accFormFlex accForm14">
+                      <div class="accFormField fullFexwidth for_radio">
+                        <p class="labelText">
+                          <strong
+                            >Do you authorise us to give your child ibuprofen or paracetamol if necessary? The
+                            prescription will always be issued by the school nurse and notified to the parents.</strong
+                          >
+                          ¿Nos autoriza a darle a su hijo ibuprofeno o paracetamol en caso de que sea necesario? La
+                          administración se realizará siempre por la enfermería y se notifica siempre a los padres.
+                          <span class="required-star">*</span>
+                        </p>
+                        <br />
+                        <div id="medical_opts">
+                          <div class="medOpt">
+                            <input
+                              type="radio"
+                              name="child_ibuprofen"
+                              id="neither_of_them"
+                              class="neither_of_them"
+                              value="Neither-of-them"
+                              readonly=""
+                              disabled=""
+                            />
+                            <label for="neither_of_them" class="radioLabel">
+                              <div class="labelWrapper">
+                                <strong
+                                  >Neither of them
+                                  <span class="spanTextNormal">(Ningún medicamento)</span>
+                                </strong>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="medOpt">
+                            <input
+                              type="radio"
+                              name="child_ibuprofen"
+                              id="both_of_them"
+                              class="both_of_them"
+                              value="Both-of-them"
+                              readonly=""
+                              disabled=""
+                            />
+                            <label for="both_of_them" class="radioLabel">
+                              <div class="labelWrapper">
+                                <strong
+                                  >Both of them
+                                  <span class="spanTextNormal">(Ambos medicamentos)</span>
+                                </strong>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="medOpt">
+                            <input
+                              type="radio"
+                              name="child_ibuprofen"
+                              id="only_ibuprofen"
+                              class="only_ibuprofen"
+                              value="Only-ibuprofen"
+                              readonly=""
+                              disabled=""
+                            />
+                            <label for="only_ibuprofen" class="radioLabel">
+                              <div class="labelWrapper">
+                                <strong
+                                  >Only ibuprofen
+                                  <span class="spanTextNormal"> (Sólo ibuprofeno)</span>
+                                </strong>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="medOpt">
+                            <input
+                              type="radio"
+                              name="child_ibuprofen"
+                              id="only_paracetamol"
+                              class="only_paracetamol"
+                              value="Only-paracetamol"
+                              readonly=""
+                              disabled=""
+                            />
+                            <label for="only_paracetamol" class="radioLabel">
+                              <div class="labelWrapper">
+                                <strong
+                                  >Only paracetamol
+                                  <span class="spanTextNormal">(Sólo paracetamol)</span>
+                                </strong>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                        <p id="child_ibuprofen_error" class="gender_empty err_msg_hide err_msg">
+                          Please check one value
+                        </p>
+                        <br />
+                      </div>
+                      <div class="accFormField fullFexwidth for_radio">
+                        <p class="labelText">
+                          <strong
+                            >Do you authorise us to give your child antiallergic medication (dexchlorpheniramine syrup
+                            or/and hydrocortisone cream) in case of allergic episode? The prescription will always be
+                            issued by the school nurse and notified to the parents.</strong
+                          >
+                          ¿Nos autoriza a darle a su hijo medicación antialérgica (jarabe dexclorfeniramina y/o
+                          hidrocortisona pomada) en caso de que se produzca un episodio alérgico? La administración se
+                          realizará siempre por la enfermería y se notifica siempre a los padres:
+                          <span class="required-star">*</span>
+                        </p>
+                        <br />
+                        <div class="authoriseWrapper">
+                          <div class="authoriseFlex">
+                            <input
+                              type="radio"
+                              name="antiallergic_medication"
+                              id="antiallergic_medication_yes"
+                              class="antiallergic_medication_yes"
+                              value="Yes"
+                              readonly=""
+                              disabled=""
+                            />
+                            <label for="antiallergic_medication_yes" class="radioLabel"><strong>Yes</strong>(Si)</label>
+                          </div>
+                          <div class="authoriseFlex">
+                            <input
+                              type="radio"
+                              name="antiallergic_medication"
+                              id="antiallergic_medication_no"
+                              class="antiallergic_medication_no"
+                              value="No"
+                              readonly=""
+                              disabled=""
+                            />
+                            <label for="antiallergic_medication_no" class="radioLabel"><strong>No</strong>(No)</label>
+                          </div>
+                        </div>
+                        <p id="antiallergic_medication_error" class="parents_marital_status_empty err_msg_hide err_msg">
+                          Please check one value
+                        </p>
+                        <br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <span class="accTitle mergedFormTitle medicalDetailsTitle"> Medical Details / Datos Medicos</span>
+              <form id="form15" data-hs-cf-bound="true">
+                <div class="form_one_part_one_outer break_here">
+                  <div class="new_for_flex_outer">
+                    <div class="medicalDetails accFormFlex">
+                      <div class="accFormField fullFexwidth medDetLabel">
+                        <div class="label_for_space_one">
+                          <label for="does_child_suffer">
+                            <div class="labelWrapper">
+                              <strong
+                                >Does your child suffer from any medical condition that we should be aware of? If so,
+                                please explain.
+                                <span class="spanTextNormal">
+                                  ¿Tiene su hijo alguna enfermedad que debamos conocer? Si es así, por favor,
+                                  detállela.</span
+                                >
+                              </strong>
+                            </div>
+                          </label>
+                        </div>
+                        <input
+                          type="text"
+                          name="does_child_suffer"
+                          id="does_child_suffer"
+                          class="does_child_suffer"
+                          readonly=""
+                        />
+                      </div>
+                      <div class="accFormField fullFexwidth medDetLabel">
+                        <div class="label_for_space_one">
+                          <label for="does_child_any_medical_dietary">
+                            <div class="labelWrapper">
+                              <strong
+                                >Does your child have any medical dietary requirements? If so please, explain (medical
+                                report will be required).
+                                <span class="spanTextNormal">
+                                  ¿Su hijo tiene alguna dieta especial por prescripción médica? Si es así, explíquela
+                                  (se requiere informe médico)</span
+                                >
+                              </strong>
+                            </div>
+                          </label>
+                        </div>
+                        <input
+                          type="text"
+                          name="does_child_any_medical_dietary"
+                          id="does_child_any_medical_dietary"
+                          class="does_child_any_medical_dietary"
+                          readonly=""
+                        />
+                      </div>
+                      <div class="accFormField fullFexwidth medDetLabel">
+                        <div class="label_for_space_one">
+                          <label for="childs_health_inf">
+                            <div class="labelWrapper">
+                              <strong
+                                >Any other important information about your childs health?
+                                <span class="spanTextNormal">
+                                  Indique cualquier otro dato importante sobre la salud del solicitante</span
+                                >
+                              </strong>
+                            </div>
+                          </label>
+                        </div>
+                        <input
+                          type="text"
+                          name="childs_health_inf"
+                          id="childs_health_inf"
+                          class="childs_health_inf"
+                          readonly=""
+                        />
+                      </div>
+                      <div class="accFormField fullFexwidth medDetLabel">
+                        <div class="label_for_space_one">
+                          <label for="child_have_any_allergy">
+                            <div class="labelWrapper">
+                              <strong
+                                >Does your child have any type of allergy?, If so, please specify.
+                                <span class="spanTextNormal">
+                                  ¿Su hijo tiene algún tipo de alergia? Si es así, por favor explíquelo.</span
+                                >
+                              </strong>
+                            </div>
+                          </label>
+                        </div>
+                        <input
+                          type="text"
+                          name="child_have_any_allergy"
+                          id="child_have_any_allergy"
+                          class="child_have_any_allergy"
+                          readonly=""
+                        />
+                      </div>
+                    </div>
+                    <div class="confirmationDisclosed">
+                      <div class="confirmationDisclosedInner">
+                        <input
+                          type="checkbox"
+                          id="confirmationDisclosed"
+                          class="confirmationDisclosed"
+                          name="confirmationDisclosed"
+                          value="true"
+                          readonly=""
+                          disabled=""
+                        />
+                        <label for="confirmationDisclosed" class="confirmationDisclosed">
+                          By clicking this box, I confirm that what has been disclosed in this form about my child is
+                          true to the best of my knowledge/ Al hacer clic en esta casilla, confirmo que lo que se ha
+                          revelado anteriormente sobre mi hijo es cierto a mi buen saber y entender.<span
+                            class="required-star"
+                            >*</span
+                          ></label
+                        >
+                      </div>
+                      <p id="confirmationDisclosed_error" class="confirmationDisclosed_empty err_msg_hide err_msg">
+                        *Please check the required field
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="accordion-item accordion16 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle"> Upload Documents / Subir Documentos</span>
+            </div>
+            <div class="accordion-content">
+              <form id="form16" data-hs-cf-bound="true">
+                <div class="uploadFileOuterWrapper">
+                  <div class="uploadContainerWrap">
+                    <div class="upload-container">
+                      <div class="uploadProgBarandText">
+                        <label class="fileUploadLabel">
+                          <div class="labelWrapper">
+                            <strong
+                              >Birth Certificate
+                              <span class="spanTextNormal"> / Certificado de Nacimiento</span>
+                              <span class="required-star">*</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <div class="fileUploadInput">
+                          <input
+                            type="file"
+                            readonly=""
+                            disabled=""
+                            id="fileInput1"
+                            accept=".pdf"
+                            style="display: none"
+                          />
+                          <label class="progress-label" id="progress-label1" for="progress1"> </label>
+                          <!--                           <progress id="progress1" value="0" max="100"></progress> -->
+                          <!--                           <button type="submit" class="remove-file-btn remove-file-btn1" del-id="" data-target="fileInput1">&#10006;</button>  -->
+                          <a
+                            class="uploadedUrl1 previewLink"
+                            href="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/Attachment-pdf-files/Birth_Certificate-1.jpeg"
+                            target="_blank"
+                            style="display: inline"
+                            >Birth_Certificate</a
+                          >
+                        </div>
+                      </div>
+                      <p id="birth_certificate_error" class="confirmationDisclosed_empty err_msg_hide err_msg">
+                        *Please check the required field
+                      </p>
+                    </div>
+                    <div class="upload-container">
+                      <div class="uploadProgBarandText">
+                        <label class="fileUploadLabel">
+                          <div class="labelWrapper">
+                            <strong
+                              >Good Conduct Certificate
+                              <span class="spanTextNormal"> / Certificado de Buena Conducta</span>
+                              <span class="required-star">*</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <div class="fileUploadInput">
+                          <input
+                            type="file"
+                            readonly=""
+                            disabled=""
+                            id="fileInput2"
+                            accept=".pdf"
+                            style="display: none"
+                          />
+                          <label class="progress-label" id="progress-label2" for="progress2"> </label>
+                          <!-- <progress id="progress2" value="0" max="100"></progress>
+                        <button type="submit" class="remove-file-btn remove-file-btn2" del-id="" data-target="fileInput2">&#10006;</button> -->
+                          <!-- Remove icon -->
+                          <a
+                            class="uploadedUrl2 previewLink"
+                            href="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/Attachment-pdf-files/Good_Conduct_Certificate"
+                            target="_blank"
+                            style="display: inline"
+                            >Good_Conduct_Certificate</a
+                          >
+                        </div>
+                      </div>
+                      <p id="gd_conduct_certificate_error" class="confirmationDisclosed_empty err_msg_hide err_msg">
+                        *Please check the required field
+                      </p>
+                    </div>
+                    <div class="upload-container">
+                      <div class="uploadProgBarandText">
+                        <label class="fileUploadLabel">
+                          <div class="labelWrapper">
+                            <strong
+                              >Official Photos (3x4)
+                              <span class="spanTextNormal"> / Fotos Oficiales (3x4)</span>
+                              <span class="required-star">*</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <div class="fileUploadInput">
+                          <input
+                            type="file"
+                            readonly=""
+                            disabled=""
+                            id="fileInput3"
+                            accept=".pdf"
+                            style="display: none"
+                          />
+                          <label class="progress-label" id="progress-label3" for="progress3"> </label>
+                          <!--  <progress id="progress3" value="0" max="100"></progress>
+                        <button type="submit" class="remove-file-btn remove-file-btn3" del-id="" data-target="fileInput3">&#10006;</button>  -->
+                          <a
+                            class="uploadedUrl3 previewLink"
+                            href="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/Attachment-pdf-files/Official_Photos"
+                            target="_blank"
+                            style="display: inline"
+                            >Official_Photos</a
+                          >
+                        </div>
+                      </div>
+                      <p id="official_photos_error" class="confirmationDisclosed_empty err_msg_hide err_msg">
+                        *Please check the required field
+                      </p>
+                    </div>
+                    <div class="upload-container">
+                      <div class="uploadProgBarandText">
+                        <label class="fileUploadLabel">
+                          <div class="labelWrapper">
+                            <strong
+                              >Health Certificate
+                              <span class="spanTextNormal"> / Certificado de salud</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <div class="fileUploadInput">
+                          <input type="file" readonly="" disabled="" id="fileInput4" accept=".pdf" />
+                          <label class="progress-label" id="progress-label4" for="progress4"> </label>
+                          <!--  <progress id="progress4" value="0" max="100"></progress>
+                        <button type="submit" class="remove-file-btn remove-file-btn4" del-id="" data-target="fileInput4">&#10006;</button>  -->
+                          <a class="uploadedUrl4 previewLink" href="?hsLang=zh-cn" target="_blank">Preview</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="upload-container">
+                      <div class="uploadProgBarandText">
+                        <label class="fileUploadLabel">
+                          <div class="labelWrapper">
+                            <strong
+                              >Copy of Main Point of Contact's Passport
+                              <span class="spanTextNormal"> / Copia del pasaporte del primer punto de contacto</span>
+                            </strong>
+                          </div>
+                        </label>
+                        <div class="fileUploadInput">
+                          <input type="file" readonly="" disabled="" id="fileInput5" accept=".pdf" />
+                          <label class="progress-label" id="progress-label5" for="progress5"> </label>
+                          <!--                           <progress id="progress5" value="0" max="100"></progress>
+                        <button type="submit" class="remove-file-btn remove-file-btn5" del-id="" data-target="fileInput5">&#10006;</button>  -->
+                          <a class="uploadedUrl5 previewLink" href="?hsLang=zh-cn" target="_blank">Preview</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="upload-container">
+                      <div class="uploadProgBarandText">
+                        <label class="fileUploadLabel">
+                          <div class="labelWrapper">
+                            <strong
+                              >Additional Document
+                              <span class="spanTextNormal"> </span>
+                              <span class="required-star"></span>
+                            </strong>
+                          </div>
+                        </label>
+                        <div class="fileUploadInput">
+                          <input type="file" readonly="" disabled="" id="fileInput6" accept=".pdf" />
+                          <label class="progress-label" id="progress-label6" for="progress6"> </label>
+                          <!-- <progress id="progress2" value="0" max="100"></progress>
+                        <button type="submit" class="remove-file-btn remove-file-btn2" del-id="" data-target="fileInput2">&#10006;</button> -->
+                          <!-- Remove icon -->
+                          <a class="uploadedUrl6 previewLink" href="?hsLang=zh-cn" target="_blank">Preview</a>
+                        </div>
+                      </div>
+                      <p id="addnl_certificate_error" class="addnl_certificate_error err_msg_hide err_msg">
+                        *Please check the required field
+                      </p>
+                    </div>
+                    <div id="feedback"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion-item accordion17 tab">
+            <div class="accordion-header">
+              <span class="accTitleDot">
+                <img
+                  src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/ISP-Online-Application-2024/Green.svg"
+                  alt="dot"
+                />
+              </span>
+              <span class="accTitle acc17bld">
+                <span>
+                  Authorization for the Recording and Use of Image Rights /<br />
+                  Autorizacion Para la Grabacion y Uso de Derechos de imagen
+                </span>
+              </span>
+            </div>
+            <div class="accordion-content">
+              <form id="form17" data-hs-cf-bound="true">
+                <div class="form_five_innerCol2">
+                  <div class="form_one_part_one_outer">
+                    <div class="new_for_flex_outer">
+                      <div class="confirmationImg">
+                        <div class="confirmationImgInner">
+                          <label for="confirmationImg" class="accFormFlex">
+                            <span class="flexColumn accFormField">
+                              <p>
+                                International Schools Partnership Limited and
+                                <span class="schoolName" id="schoolNameEn">The Lady Elizabeth School</span> (the
+                                “School”) is obliged to comply with the General Data Protection Regulation, of 27 April
+                                2016 (the “GDPR”), and the laws applicable when it takes or publishes images of its
+                                students.
+                              </p>
+                              <p>
+                                By signing this document (“the Authorization”), I authorize the School to take and use
+                                images and videos of the minor during this school year (the “Images”). I give my consent
+                                to the School to take and use the Images through any means of use (including but not
+                                limited to, its reproduction, distribution, diffusion, exhibition or communication to
+                                the public) for:
+                              </p>
+                              <ul>
+                                <li>
+                                  Internal use of the School, including but not limited to brochures, bulletin boards,
+                                  presentations, informative documents exclusively for informative and internal School
+                                  operation purposes.
+                                </li>
+                                <li>
+                                  Promotional use by the School, including, but not limited to webpage, social
+                                  networking platforms, promotional brochures intended exclusively for advertising and
+                                  promotional purposes.
+                                </li>
+                              </ul>
+                              <p>
+                                This Authorization will remain in force for the maximum period allowed by applicable
+                                law, and in any case, as long as the rights remain in force and you do not revoke your
+                                consent. The territorial scope of this Authorization is worldwide. Likewise, I expressly
+                                consent the School to process my personal data and the personal data of the minor to use
+                                the Images and to execute this Authorization. The legal basis of this data processing is
+                                the execution of this Authorization, and the processing of personal data necessary for
+                                the use of the Images under the provisions of the Authorization. My personal data and
+                                the data of the minor will be stored as long as I do not expressly revoke my consent,
+                                and, in any case, when required by the applicable legislation or as long as any kind of
+                                liability may arise thereof.
+                              </p>
+                              <p>
+                                I understand that I can exercise, in the terms provided by current legislation, the
+                                rights of access, rectifi cation or deletion of my personal data or those of the minor,
+                                as well as the right of limitation or opposition to the processing of data, and the
+                                right to portability of the personal data. I may exercise these rights through written
+                                communication to the following address:
+                                <a
+                                  class="schoolEmainEn"
+                                  id="schoolEmailEn"
+                                  href="mailto:reception@britishschoolmala-ga.com"
+                                  >reception@britishschoolmala-ga.com</a
+                                >.
+                              </p>
+                              <p>
+                                I understand that I can fi le a claim, at any time, before the competent data protection
+                                supervisory authority.
+                              </p>
+
+                              <div class="confirmationImgOuter">
+                                <div class="confirmationImgFlex">
+                                  <input
+                                    type="radio"
+                                    name="confirmationImg"
+                                    id="confirmationImgYes"
+                                    class="confirmationImgYes"
+                                    value="true"
+                                    readonly=""
+                                    disabled=""
+                                  />
+                                  <label for="confirmationImgYes" class="radioLabel">Yes (Sí)</label>
+                                </div>
+                                <div class="confirmationImgFlex">
+                                  <input
+                                    type="radio"
+                                    name="confirmationImg"
+                                    id="confirmationImgNo"
+                                    class="confirmationImgNo"
+                                    value="false"
+                                    readonly=""
+                                    disabled=""
+                                  />
+                                  <label for="confirmationImgNo" class="radioLabel">No (No)</label>
+                                </div>
+                              </div>
+                            </span>
+                            <span class="flexColumn accFormField">
+                              <p>
+                                International Schools Partnership Limited y
+                                <span class="schoolName" id="schoolNameSp">School Name</span> (el “Centro”) está
+                                obligado a cumplir con el Reglamento General de Protección de Datos, de 27 de abril de
+                                2016 (“RGPD”), así como con el resto de la normativa que resulte de aplicación cuando
+                                toma o publica imágenes de sus alumnos. Mediante la fi rma del presente documento (la
+                                “Autorización”) autorizo al Centro a la toma y posterior uso de las imágenes y videos
+                                tomadas del menor durante este curso escolar (en adelante, las “Imágenes”).
+                              </p>
+                              <p>
+                                Por la presente, consiento que el Centro tome y use las Imágenes para su uso a través de
+                                cualquier modalidad de uso (entre otras, para su reproducción, distribución, difusión,
+                                exhibición o comunicación pública) para:
+                              </p>
+                              <ul>
+                                <li>
+                                  el uso interno del Centro, incluyendo, a modo meramente ejemplificativo su inclusión
+                                  en folletos, tablones escolares, presentaciones a o notas informativas con fines
+                                  exclusivamente informativos y de funcionamiento interno del Centro.
+                                </li>
+                                <li>
+                                  el uso promocional del Centro, incluyendo, a modo meramente ejemplifi cativo, su
+                                  inclusión en página web, redes sociales, folletos promocionales con fines
+                                  exclusivamente publicitarios y promocionales.
+                                </li>
+                              </ul>
+                              <p>
+                                La vigencia de esta Autorización se prolongará por el máximo tiempo permitido en virtud
+                                de la ley aplicable, y en todo caso, mientras los derechos objeto de Autorización se
+                                mantengan legalmente vigor y usted no revoque su consentimiento.
+                              </p>
+                              <p>
+                                El ámbito territorial de esta Autorización es mundial. Asimismo, consiento expresamente
+                                al Centro a tratar mis datos personales y los del menor con la fi nalidad de llevar a
+                                cabo el uso las Imágenes y de ejecución de esta Autorización. La base jurídica del
+                                tratamiento de los datos es la ejecución de esta Autorización, siendo el tratamiento de
+                                los datos personales necesario para el uso de las Imágenes de acuerdo con lo establecido
+                                en la Autorización. Mis datos personales y los del menor se conservarán mientras yo no
+                                revoque expresamente el consentimiento, y en todo caso, cuando así lo exija la
+                                legislación aplicable o en tanto puedan derivarse responsabilidades.
+                              </p>
+                              <p>
+                                Entiendo que puedo ejercer, en los términos previstos por la legislación vigente, el
+                                derecho de acceso, rectifi cación o supresión de mis datos personales o de los del
+                                menor, limitación u oposición al tratamiento de los datos, así como derecho de
+                                portabilidad de los datos personales. Puedo ejercer estos derechos mediante comunicación
+                                escrita a la siguiente dirección:
+                                <a
+                                  class="schoolEmailSp"
+                                  id="schoolEmailSp"
+                                  href="mailto:reception@britishschoolmalaga.com"
+                                  >School Email</a
+                                >
+                              </p>
+                              <p>
+                                Conozco que tengo derecho a presentar una reclamación, en cualquier momento, ante la
+                                autoridad de control competente.
+                              </p>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_one_part_one_outer authorisation-sec2">
+                    <div class="for_flex accFormFlex">
+                      <div class="for_flex_one field_required accFormField">
+                        <div class="inside_new_for_flex">
+                          <label for="guardian_signature_one">
+                            <div class="labelWrapper">
+                              <strong
+                                >Guardian Signature
+                                <span class="spanTextNormal">: Firma padre / madre</span>
+                              </strong>
+                            </div>
+                          </label>
+                          <span class="guardian_signature_note"
+                            >Note: Please sign the form once downloaded or printed
+                            <span class="clearSign" id="clear-button">Clear Signature</span></span
+                          >
+                          <canvas id="sig-canvas" width="400" height="200" style="display: none"
+                            >Get a better browser, bro.</canvas
+                          >
+                          <img
+                            class="signImg"
+                            id="signImg"
+                            src="https://4541203.fs1.hubspotusercontent-na1.net/hubfs/4541203/Attachment-Files/tmpphpwMTAf9.png"
+                            style="display: inline"
+                          />
+                        </div>
+                      </div>
+                      <div class="for_flex_one dateOne field_required accFormField">
+                        <div class="inside_new_for_flex">
+                          <label for="date_one"><strong>Date</strong>: (Fecha)</label>
+                          <input value="2323-4-44" name="date_one" id="date_one" class="date_one" readonly="" />
+                        </div>
                       </div>
                     </div>
                   </div>
